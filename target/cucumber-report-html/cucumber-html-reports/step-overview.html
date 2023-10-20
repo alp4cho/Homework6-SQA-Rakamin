@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>cucumbert-test1-project</td>
+                          <td>1</td>
+                        <td>21 Oct 2023, 01:40</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">saucedemo.stepDef.AddProduct.Login_App_With_Valid_Credentials()</td>
+                <td>1</td>
+                <td class="duration" data-value="6028000000">6s 028ms</td>
+                <td class="duration" data-value="6028000000">6s 028ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.AddProduct.addSomeProductToCartWithClickAddToCart()</td>
+                <td>1</td>
+                <td class="duration" data-value="143000000">143ms</td>
+                <td class="duration" data-value="143000000">143ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.AddProduct.clickCartButtonInTheTopRightCornerToNextProcess()</td>
+                <td>1</td>
+                <td class="duration" data-value="123000000">123ms</td>
+                <td class="duration" data-value="123000000">123ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.AddProduct.theUserHasSuccessfullyLoggedInAndIsOnTheDashboardPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="52000000">052ms</td>
+                <td class="duration" data-value="52000000">052ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.AddProduct.theUserSuccessfullyAddedTheProductAndIsOnTheCartPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="221000000">221ms</td>
+                <td class="duration" data-value="221000000">221ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutComplete.Login_With_Valid_Credentials()</td>
+                <td>1</td>
+                <td class="duration" data-value="3735000000">3s 735ms</td>
+                <td class="duration" data-value="3735000000">3s 735ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutComplete.addSomeProductToCartWithClickAddToCartButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="132000000">132ms</td>
+                <td class="duration" data-value="132000000">132ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutComplete.clickCartButtonInTheTopRightCorner()</td>
+                <td>1</td>
+                <td class="duration" data-value="77000000">077ms</td>
+                <td class="duration" data-value="77000000">077ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutComplete.clickCheckoutButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="89000000">089ms</td>
+                <td class="duration" data-value="89000000">089ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutComplete.clickContinueButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="133000000">133ms</td>
+                <td class="duration" data-value="133000000">133ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutComplete.inCheckoutOverviewPageClickFinishButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="101000000">101ms</td>
+                <td class="duration" data-value="101000000">101ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutComplete.inputCheckoutInformation()</td>
+                <td>1</td>
+                <td class="duration" data-value="487000000">487ms</td>
+                <td class="duration" data-value="487000000">487ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutComplete.userGetInfoThankForYourOrder()</td>
+                <td>1</td>
+                <td class="duration" data-value="259000000">259ms</td>
+                <td class="duration" data-value="259000000">259ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutYourInformation.Login_With_Valid_Credentials_user_and_password()</td>
+                <td>2</td>
+                <td class="duration" data-value="7650000000">7s 650ms</td>
+                <td class="duration" data-value="3825000000">3s 825ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutYourInformation.addSomeProductToCartWithClickAddToCartButtonInEveryProduct()</td>
+                <td>2</td>
+                <td class="duration" data-value="352000000">352ms</td>
+                <td class="duration" data-value="176000000">176ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutYourInformation.clickCartInTheTopRightCorner()</td>
+                <td>2</td>
+                <td class="duration" data-value="155000000">155ms</td>
+                <td class="duration" data-value="77500000">077ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutYourInformation.clickCheckoutButtonToNextProcess()</td>
+                <td>2</td>
+                <td class="duration" data-value="181000000">181ms</td>
+                <td class="duration" data-value="90500000">090ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutYourInformation.clickContinueButtonToNextProcess()</td>
+                <td>2</td>
+                <td class="duration" data-value="237000000">237ms</td>
+                <td class="duration" data-value="118500000">118ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutYourInformation.doNotInputPostalCode()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutYourInformation.inputFirstName()</td>
+                <td>2</td>
+                <td class="duration" data-value="181000000">181ms</td>
+                <td class="duration" data-value="90500000">090ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutYourInformation.inputLastName()</td>
+                <td>2</td>
+                <td class="duration" data-value="249000000">249ms</td>
+                <td class="duration" data-value="124500000">124ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutYourInformation.inputPostalCode()</td>
+                <td>1</td>
+                <td class="duration" data-value="169000000">169ms</td>
+                <td class="duration" data-value="169000000">169ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutYourInformation.userGetErrorMessagePostalCodeIsRequired()</td>
+                <td>1</td>
+                <td class="duration" data-value="225000000">225ms</td>
+                <td class="duration" data-value="225000000">225ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.CheckoutYourInformation.userInOnCheckoutOverviewPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="221000000">221ms</td>
+                <td class="duration" data-value="221000000">221ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Login.click_Login_Button()</td>
+                <td>2</td>
+                <td class="duration" data-value="347000000">347ms</td>
+                <td class="duration" data-value="173500000">173ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Login.input_Invalid_Password()</td>
+                <td>1</td>
+                <td class="duration" data-value="366000000">366ms</td>
+                <td class="duration" data-value="366000000">366ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Login.input_Password()</td>
+                <td>1</td>
+                <td class="duration" data-value="154000000">154ms</td>
+                <td class="duration" data-value="154000000">154ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Login.input_Username()</td>
+                <td>2</td>
+                <td class="duration" data-value="683000000">683ms</td>
+                <td class="duration" data-value="341500000">341ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Login.saucedemo_Login_page()</td>
+                <td>2</td>
+                <td class="duration" data-value="5487000000">5s 487ms</td>
+                <td class="duration" data-value="2743500000">2s 743ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Login.user_Get_Error_Message()</td>
+                <td>1</td>
+                <td class="duration" data-value="201000000">201ms</td>
+                <td class="duration" data-value="201000000">201ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Login.user_In_On_Dashboard_Page()</td>
+                <td>1</td>
+                <td class="duration" data-value="234000000">234ms</td>
+                <td class="duration" data-value="234000000">234ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Logout.Login_With_Valid_Credentials_User()</td>
+                <td>1</td>
+                <td class="duration" data-value="4089000000">4s 089ms</td>
+                <td class="duration" data-value="4089000000">4s 089ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Logout.clickLogoutButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="263000000">263ms</td>
+                <td class="duration" data-value="263000000">263ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Logout.clickSidebarMenuInTopLeftCorner()</td>
+                <td>1</td>
+                <td class="duration" data-value="82000000">082ms</td>
+                <td class="duration" data-value="82000000">082ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Logout.theUserInOnTheDashboardPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="43000000">043ms</td>
+                <td class="duration" data-value="43000000">043ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">saucedemo.stepDef.Logout.userBackOnLoginPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="243000000">243ms</td>
+                <td class="duration" data-value="243000000">243ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>36</td>
+              <td>46</td>
+              <td class="duration">33s 392ms</td>
+              <td class="duration">725ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
